@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Tactileo Quest</title>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="img/logo40.png" />
+
+	<!-- ne pas detecter les num de telephone -->
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+	<!-- android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<!-- iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="translucent-black">
+	<link rel="apple-touch-icon" href="img/logo175.png" />
+	<link rel="apple-touch-startup-image" href="img/logo175.png"/>
+		
+	<link rel="stylesheet" href="rpg.css">
+	<link rel="stylesheet" href="tquest.css">
+	<link rel="stylesheet" href="openlayers/Control/SearchBar.css">
+	<link rel="stylesheet" href="lib/addtohomescreen.css">
+	<link rel="stylesheet" href="lib/jquery.mCustomScrollbar.css">
+
+</head>
+
+<body ondragstart="return false;" ondrop="return false;">
+
+	<div id="map"></div>
+	<div id="container">
+		<div id="content" class="x1_5">
+			<!-- Layer switcher -->
+			<div id="ortho" class="layer" >Photo</div>
+			<div id="emajor" class="layer" >Carte</div>
+			
+			<!-- compas -->
+			<div id="compas"></div>
+
+		</div>
+		
+		<!-- Info parchemin -->
+		<div id="parchemin">
+			<div class="info"> INFO
+			</div>
+			<div class="sceau"></div>
+			<div class="top"></div>
+			<div class="bottom"></div>
+		</div>
+		<!-- Search bar for teleport -->
+		<div id="teleporte">
+			<div class="searchBar"></div> 
+		</div>
+
+		<!-- about -->
+		<div id="about" class="hidden">
+			<div style="height:100%; overflow:auto; ">
+				<p style="text-align:center; margin-top:1em;">>---<>---<</p>
+				<h2>&Agrave; propos...</h2>
+				<p>
+					Exemple d'application multi-points de déplacement et de collecte d'information sur une carte dans le cadre du projet <a href="http://projet.tactileo.net/">Tactiléo</a>.
+					<br />
+					Code sous <a href="http://www.cecill.info/licences/Licence_CeCILL-B_V1-fr.html">licence CeCILL-B</a> &copy; 2014-2015 IGN 
+				</p>
+				<p style="text-align:center">>---<>---<</p>
+				<h2>Attribution</h2>
+				<p>Les ressources suivantes sont utilisée dans l'application :</p>
+				<ul>
+					<li>Images et animations</li>
+					<ul>
+						<li><a href="http://projet.tactileo.net/">Logo Tactileo</a> - &copy; Tacileo 2014</li>
+						<li><a href="http://gaurav.munjal.us/Universal-LPC-Spritesheet-Character-Generator/">Universal LPC Sprite Sheet</a> - &copy; CC-By-SA - <a href="https://github.com/jrconway3/Universal-LPC-spritesheet/blob/master/AUTHORS.txt">Liste des auteurs</a></li>
+						<li><a href="http://orteil.deviantart.com/art/A-whole-lot-of-RPG-items-379986564">A whole lot of RPG items par Orteil</a> - &copy; CC-By-SA</li>
+						<li><a href "http://pixabay.com/fr/certificat-document-lion-joint-260536/">Parchemin par stux, modifié</a> - &copy; CC0 Public Domain</li>
+						<li><a href "http://pixabay.com/fr/parchemin-papyrus-sale-vieux-435347/">Papyrus par geralt, modifié</a> - &copy; CC0 Public Domain</li>
+						<li><a href="http://fr.wikipedia.org/wiki/Fichier:Compass_rose_en_04p.svg">Compass Rose par ElfQrin</a> - &copy; CC-By-SA</li>
+					</ul>
+					<li>Ressources cartographiques</li>
+					<ul>
+						<li><a href="http://www.geoportail.gouv.fr/donnee/56/carte-de-l-etat-major-en-couleur?l=GEOGRAPHICALGRIDSYSTEMS.ETATMAJOR40$GEOPORTAIL:OGC:WMTS%281%29&permalink=yes">Carte d'Etat Major&reg; (1820-1866)</a> - &copy; IGN-Géoportail</li>
+						<li><a href="http://www.geoportail.gouv.fr/donnee/81/photographies-aeriennes?l=ORTHOIMAGERY.ORTHOPHOTOS$GEOPORTAIL:OGC:WMTS%281%29&permalink=yes">Photographies aériennes</a> - &copy; IGN-Géoportail</li>
+					</ul>
+					<li>Source documentaire</li>
+					<ul>
+						<li><a href="http://dbpedia.org/About">DBpedia Knowledge Base</a> - &copy; DBPedia CC-By-SA</li>
+					</ul>
+					<li>Bibliothèques</li>
+					<ul>
+						<li><a href="http://jquery.com/">jQuery</a> - MIT License</li>
+						<li><a href="http://manos.malihu.gr/jquery-custom-content-scroller/">jQuery custom content scroller par malihu</a> - MIT License</li>
+					</ul>
+				</ul>
+				<p style="text-align:center">>---<>---<</p>
+			</div>
+			<div class="sceau" title="Fermer"></div>
+		</div>
+		<div id="showAbout" class="sceau" style="z-index:1000; right:0" title="A propos..."></div>
+	</div>
+	
+	
+	<div id="debug" style="display:none; position:absolute; left:0; bottom:0; padding:0 0.5em; width:100%; background:#fff; z_index:100000;">
+	</div>
+
+	<!-- Define css mask for DBPedia images -->
+	<style>
+		#parchemin img 
+		{	mask: url('#mask');
+			-webkit-mask: url('img/mask.png');
+			-webkit-mask-size: 100% 100%;
+			-webkit-mask-position: center;
+		}	
+	</style>
+	<svg>
+		<mask id="mask" maskContentUnits="objectBoundingBox">
+		<!-- using an img, but this img is black/transparent so we filter it to make it white -->
+			<image xlink:href="img/mask.png" width="1" height="1" preserveAspectRatio="none" filter="url(#filter)"/>
+		</mask>
+		<!-- the filter to make the image white -->
+		<filter id="filter">
+			<feFlood flood-color="white" />
+			<feComposite in2="SourceAlpha" operator="in" />
+		</filter>
+	</svg>
+
+	<script src="lib/jquery.js"></script>
+	<script src="lib/addtohomescreen.min.js"></script>
+	<script src="lib/jquery.mCustomScrollbar.min.js"></script>
+	
+	<script src="openlayers/OpenLayers.js"></script>
+	<script src="openlayers/geoportail.js"></script>
+	<script src="openlayers/GeoportailService.js"></script>
+	<script src="openlayers/Control/SearchBar.js"></script>
+	<script src="openlayers/Layer/DBPedia.js"></script>
+
+	<script src="Classe.js"></script>
+	<script src="TouchControl.js"></script>
+	<script src="Sprite.js"></script>
+	
+	<script src="config.js"></script>
+	<script src="tquest.js"></script>
+
+</body>
+</html>

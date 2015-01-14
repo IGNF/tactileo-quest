@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Sprites</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="rpg.css">
+	<script src="../jquery.js"></script>
+
+</head>
+<body>
+<script>
+var action = { "incant":7, "thrust":8, "walk":9, "slash":6, "shoot":13, "hurt":6  };
+var position = { "back":0, "left":1, "front":2, "right":3 };
+var dx=0, dy=2;
+function createSpriteSheet()
+{	var y=0;
+	for (var a in action) 
+	{	for (var p in position)
+		{	for (var x=0; x<action[a]; x++) 
+				$("<div>").addClass("sprite")
+					.css ( { "background-position": (-64*x-dx) +"px "+ (-64*y-dy)+"px" } )
+					.appendTo("body")
+					;
+			$("<br/>").appendTo("body");
+			y++;
+			if (a=="hurt") break;
+		}
+	}
+
+	var css = "";
+	y = 0;
+	for (var a in action) 
+	{	css += "<br/>/* SPRITE "+a+" */<br/>"; 
+		for (var p in position)
+		{	css += "/* "+p+" */<br/>"; 
+			for (var x=0; x<action[a]; x++) 
+				css += ".sprite_"+a+"_"+p+"_"+x+" { background-position: "+ (-64*x-dx) +"px "+ (-64*y-dy)+"px; } <br/>";
+			y++;
+			if (a=="hurt") break;
+		}
+	}
+	$("<div>").html(css).appendTo("body");
+}
+
+function animateSprite()
+{	var n = 0;
+	var posi = [ "back", "left", "front", "right" ];
+	var pos = 2;
+	for (var a in action) 
+		$("<div>").attr("id", a)
+			.addClass("sprite sprite_"+a+"_front_0")
+			.click(function()
+			{	pos = (pos+1)%4;
+			})
+			.data("action", a)
+			.appendTo("body");
+	function animate()
+	{	requestAnimationFrame(animate);
+		n += 0.1;
+		for (var a in action) $("#"+a).removeClass().addClass("sprite sprite_"+a+"_"+posi[pos]+"_"+Math.round(n)%action[a]);
+	}
+	animate();
+}
+</script>
+</body>

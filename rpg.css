@@ -1,0 +1,255 @@
+/** CSS for sprite sheet
+*
+* Copyright (c) 2014 by Jean-Marc.Viglino [at] ign.fr
+* Licensed under the CeCILL-B Licence (http://www.cecill.info/).
+*/
+.sprite
+{	width: 64px;
+	height: 64px;
+	overflow: hidden;
+	background-image:url("img/orc.png");
+	background-position: 0px -130px;
+	border-radius:64px;
+	display:inline-block;
+	transform:translate(-2px 0);
+}
+
+.x1_5 .sprite 
+{ 	-webkit-transform: scale(1.5); 
+	transform: scale(1.5); 
+}
+.x2 .sprite 
+{ 	-webkit-transform: scale(2); 
+	transform: scale(2); 
+}
+.select .sprite
+{	box-shadow:0 0 0 8px rgba(255,255,255,0.4);
+}
+
+/* SPRITE incant */
+/* back */
+.sprite_incant_back_0 { background-position: 0px -2px; }
+.sprite_incant_back_1 { background-position: -64px -2px; }
+.sprite_incant_back_2 { background-position: -128px -2px; }
+.sprite_incant_back_3 { background-position: -192px -2px; }
+.sprite_incant_back_4 { background-position: -256px -2px; }
+.sprite_incant_back_5 { background-position: -320px -2px; }
+.sprite_incant_back_6 { background-position: -384px -2px; }
+/* left */
+.sprite_incant_left_0 { background-position: 0px -66px; }
+.sprite_incant_left_1 { background-position: -64px -66px; }
+.sprite_incant_left_2 { background-position: -128px -66px; }
+.sprite_incant_left_3 { background-position: -192px -66px; }
+.sprite_incant_left_4 { background-position: -256px -66px; }
+.sprite_incant_left_5 { background-position: -320px -66px; }
+.sprite_incant_left_6 { background-position: -384px -66px; }
+/* front */
+.sprite_incant_front_0 { background-position: 0px -130px; }
+.sprite_incant_front_1 { background-position: -64px -130px; }
+.sprite_incant_front_2 { background-position: -128px -130px; }
+.sprite_incant_front_3 { background-position: -192px -130px; }
+.sprite_incant_front_4 { background-position: -256px -130px; }
+.sprite_incant_front_5 { background-position: -320px -130px; }
+.sprite_incant_front_6 { background-position: -384px -130px; }
+/* right */
+.sprite_incant_right_0 { background-position: 0px -194px; }
+.sprite_incant_right_1 { background-position: -64px -194px; }
+.sprite_incant_right_2 { background-position: -128px -194px; }
+.sprite_incant_right_3 { background-position: -192px -194px; }
+.sprite_incant_right_4 { background-position: -256px -194px; }
+.sprite_incant_right_5 { background-position: -320px -194px; }
+.sprite_incant_right_6 { background-position: -384px -194px; }
+
+/* SPRITE thrust */
+/* back */
+.sprite_thrust_back_0 { background-position: 0px -258px; }
+.sprite_thrust_back_1 { background-position: -64px -258px; }
+.sprite_thrust_back_2 { background-position: -128px -258px; }
+.sprite_thrust_back_3 { background-position: -192px -258px; }
+.sprite_thrust_back_4 { background-position: -256px -258px; }
+.sprite_thrust_back_5 { background-position: -320px -258px; }
+.sprite_thrust_back_6 { background-position: -384px -258px; }
+.sprite_thrust_back_7 { background-position: -448px -258px; }
+/* left */
+.sprite_thrust_left_0 { background-position: 0px -322px; }
+.sprite_thrust_left_1 { background-position: -64px -322px; }
+.sprite_thrust_left_2 { background-position: -128px -322px; }
+.sprite_thrust_left_3 { background-position: -192px -322px; }
+.sprite_thrust_left_4 { background-position: -256px -322px; }
+.sprite_thrust_left_5 { background-position: -320px -322px; }
+.sprite_thrust_left_6 { background-position: -384px -322px; }
+.sprite_thrust_left_7 { background-position: -448px -322px; }
+/* front */
+.sprite_thrust_front_0 { background-position: 0px -386px; }
+.sprite_thrust_front_1 { background-position: -64px -386px; }
+.sprite_thrust_front_2 { background-position: -128px -386px; }
+.sprite_thrust_front_3 { background-position: -192px -386px; }
+.sprite_thrust_front_4 { background-position: -256px -386px; }
+.sprite_thrust_front_5 { background-position: -320px -386px; }
+.sprite_thrust_front_6 { background-position: -384px -386px; }
+.sprite_thrust_front_7 { background-position: -448px -386px; }
+/* right */
+.sprite_thrust_right_0 { background-position: 0px -450px; }
+.sprite_thrust_right_1 { background-position: -64px -450px; }
+.sprite_thrust_right_2 { background-position: -128px -450px; }
+.sprite_thrust_right_3 { background-position: -192px -450px; }
+.sprite_thrust_right_4 { background-position: -256px -450px; }
+.sprite_thrust_right_5 { background-position: -320px -450px; }
+.sprite_thrust_right_6 { background-position: -384px -450px; }
+.sprite_thrust_right_7 { background-position: -448px -450px; }
+
+/* SPRITE walk */
+/* back */
+.sprite_walk_back_0 { background-position: 0px -514px; }
+.sprite_walk_back_1 { background-position: -64px -514px; }
+.sprite_walk_back_2 { background-position: -128px -514px; }
+.sprite_walk_back_3 { background-position: -192px -514px; }
+.sprite_walk_back_4 { background-position: -256px -514px; }
+.sprite_walk_back_5 { background-position: -320px -514px; }
+.sprite_walk_back_6 { background-position: -384px -514px; }
+.sprite_walk_back_7 { background-position: -448px -514px; }
+.sprite_walk_back_8 { background-position: -512px -514px; }
+/* left */
+.sprite_walk_left_0 { background-position: 0px -578px; }
+.sprite_walk_left_1 { background-position: -64px -578px; }
+.sprite_walk_left_2 { background-position: -128px -578px; }
+.sprite_walk_left_3 { background-position: -192px -578px; }
+.sprite_walk_left_4 { background-position: -256px -578px; }
+.sprite_walk_left_5 { background-position: -320px -578px; }
+.sprite_walk_left_6 { background-position: -384px -578px; }
+.sprite_walk_left_7 { background-position: -448px -578px; }
+.sprite_walk_left_8 { background-position: -512px -578px; }
+/* front */
+.sprite_walk_front_0 { background-position: 0px -642px; }
+.sprite_walk_front_1 { background-position: -64px -642px; }
+.sprite_walk_front_2 { background-position: -128px -642px; }
+.sprite_walk_front_3 { background-position: -192px -642px; }
+.sprite_walk_front_4 { background-position: -256px -642px; }
+.sprite_walk_front_5 { background-position: -320px -642px; }
+.sprite_walk_front_6 { background-position: -384px -642px; }
+.sprite_walk_front_7 { background-position: -448px -642px; }
+.sprite_walk_front_8 { background-position: -512px -642px; }
+/* right */
+.sprite_walk_right_0 { background-position: 0px -706px; }
+.sprite_walk_right_1 { background-position: -64px -706px; }
+.sprite_walk_right_2 { background-position: -128px -706px; }
+.sprite_walk_right_3 { background-position: -192px -706px; }
+.sprite_walk_right_4 { background-position: -256px -706px; }
+.sprite_walk_right_5 { background-position: -320px -706px; }
+.sprite_walk_right_6 { background-position: -384px -706px; }
+.sprite_walk_right_7 { background-position: -448px -706px; }
+.sprite_walk_right_8 { background-position: -512px -706px; }
+
+/* SPRITE slash */
+/* back */
+.sprite_slash_back_0 { background-position: 0px -770px; }
+.sprite_slash_back_1 { background-position: -64px -770px; }
+.sprite_slash_back_2 { background-position: -128px -770px; }
+.sprite_slash_back_3 { background-position: -192px -770px; }
+.sprite_slash_back_4 { background-position: -256px -770px; }
+.sprite_slash_back_5 { background-position: -320px -770px; }
+/* left */
+.sprite_slash_left_0 { background-position: 0px -834px; }
+.sprite_slash_left_1 { background-position: -64px -834px; }
+.sprite_slash_left_2 { background-position: -128px -834px; }
+.sprite_slash_left_3 { background-position: -192px -834px; }
+.sprite_slash_left_4 { background-position: -256px -834px; }
+.sprite_slash_left_5 { background-position: -320px -834px; }
+/* front */
+.sprite_slash_front_0 { background-position: 0px -898px; }
+.sprite_slash_front_1 { background-position: -64px -898px; }
+.sprite_slash_front_2 { background-position: -128px -898px; }
+.sprite_slash_front_3 { background-position: -192px -898px; }
+.sprite_slash_front_4 { background-position: -256px -898px; }
+.sprite_slash_front_5 { background-position: -320px -898px; }
+/* right */
+.sprite_slash_right_0 { background-position: 0px -962px; }
+.sprite_slash_right_1 { background-position: -64px -962px; }
+.sprite_slash_right_2 { background-position: -128px -962px; }
+.sprite_slash_right_3 { background-position: -192px -962px; }
+.sprite_slash_right_4 { background-position: -256px -962px; }
+.sprite_slash_right_5 { background-position: -320px -962px; }
+
+/* SPRITE shoot */
+/* back */
+.sprite_shoot_back_0 { background-position: 0px -1026px; }
+.sprite_shoot_back_1 { background-position: -64px -1026px; }
+.sprite_shoot_back_2 { background-position: -128px -1026px; }
+.sprite_shoot_back_3 { background-position: -192px -1026px; }
+.sprite_shoot_back_4 { background-position: -256px -1026px; }
+.sprite_shoot_back_5 { background-position: -320px -1026px; }
+.sprite_shoot_back_6 { background-position: -384px -1026px; }
+.sprite_shoot_back_7 { background-position: -448px -1026px; }
+.sprite_shoot_back_8 { background-position: -512px -1026px; }
+.sprite_shoot_back_9 { background-position: -576px -1026px; }
+.sprite_shoot_back_10 { background-position: -640px -1026px; }
+.sprite_shoot_back_11 { background-position: -704px -1026px; }
+.sprite_shoot_back_12 { background-position: -768px -1026px; }
+/* left */
+.sprite_shoot_left_0 { background-position: 0px -1090px; }
+.sprite_shoot_left_1 { background-position: -64px -1090px; }
+.sprite_shoot_left_2 { background-position: -128px -1090px; }
+.sprite_shoot_left_3 { background-position: -192px -1090px; }
+.sprite_shoot_left_4 { background-position: -256px -1090px; }
+.sprite_shoot_left_5 { background-position: -320px -1090px; }
+.sprite_shoot_left_6 { background-position: -384px -1090px; }
+.sprite_shoot_left_7 { background-position: -448px -1090px; }
+.sprite_shoot_left_8 { background-position: -512px -1090px; }
+.sprite_shoot_left_9 { background-position: -576px -1090px; }
+.sprite_shoot_left_10 { background-position: -640px -1090px; }
+.sprite_shoot_left_11 { background-position: -704px -1090px; }
+.sprite_shoot_left_12 { background-position: -768px -1090px; }
+/* front */
+.sprite_shoot_front_0 { background-position: 0px -1154px; }
+.sprite_shoot_front_1 { background-position: -64px -1154px; }
+.sprite_shoot_front_2 { background-position: -128px -1154px; }
+.sprite_shoot_front_3 { background-position: -192px -1154px; }
+.sprite_shoot_front_4 { background-position: -256px -1154px; }
+.sprite_shoot_front_5 { background-position: -320px -1154px; }
+.sprite_shoot_front_6 { background-position: -384px -1154px; }
+.sprite_shoot_front_7 { background-position: -448px -1154px; }
+.sprite_shoot_front_8 { background-position: -512px -1154px; }
+.sprite_shoot_front_9 { background-position: -576px -1154px; }
+.sprite_shoot_front_10 { background-position: -640px -1154px; }
+.sprite_shoot_front_11 { background-position: -704px -1154px; }
+.sprite_shoot_front_12 { background-position: -768px -1154px; }
+/* right */
+.sprite_shoot_right_0 { background-position: 0px -1218px; }
+.sprite_shoot_right_1 { background-position: -64px -1218px; }
+.sprite_shoot_right_2 { background-position: -128px -1218px; }
+.sprite_shoot_right_3 { background-position: -192px -1218px; }
+.sprite_shoot_right_4 { background-position: -256px -1218px; }
+.sprite_shoot_right_5 { background-position: -320px -1218px; }
+.sprite_shoot_right_6 { background-position: -384px -1218px; }
+.sprite_shoot_right_7 { background-position: -448px -1218px; }
+.sprite_shoot_right_8 { background-position: -512px -1218px; }
+.sprite_shoot_right_9 { background-position: -576px -1218px; }
+.sprite_shoot_right_10 { background-position: -640px -1218px; }
+.sprite_shoot_right_11 { background-position: -704px -1218px; }
+.sprite_shoot_right_12 { background-position: -768px -1218px; }
+
+/* SPRITE hurt */
+.sprite_hurt_back_0,
+.sprite_hurt_left_0,
+.sprite_hurt_front_0,
+.sprite_hurt_right_0  { background-position: 0px -1282px; }
+.sprite_hurt_back_1,
+.sprite_hurt_left_1,
+.sprite_hurt_front_1,
+.sprite_hurt_right_1 { background-position: -64px -1282px; }
+.sprite_hurt_back_2,
+.sprite_hurt_left_2,
+.sprite_hurt_front_2,
+.sprite_hurt_right_2 { background-position: -128px -1282px; }
+.sprite_hurt_back_3,
+.sprite_hurt_left_3,
+.sprite_hurt_front_3,
+.sprite_hurt_right_3 { background-position: -192px -1282px; }
+.sprite_hurt_back_4,
+.sprite_hurt_left_4,
+.sprite_hurt_front_4,
+.sprite_hurt_right_4 { background-position: -256px -1282px; }
+.sprite_hurt_back_5,
+.sprite_hurt_left_5,
+.sprite_hurt_front_5,
+.sprite_hurt_right_5 { background-position: -320px -1282px; } 
