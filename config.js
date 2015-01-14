@@ -6,4 +6,4 @@ if (window.Qt) Qt.fullscreen(true);
 * Get a developper key on http://api.ign.fr/geoportail/
 * Get a full key on http://professionnels.ign.fr/api-web
 */
-var apiKey = 'vnw1w48rtmdpkp2a0rksfcdn';
+var apiKey = 'yi6xktpalulojilsb7ybya1t';
