@@ -1,0 +1,261 @@
+@font-face {
+    font-family: 'almendra';
+    src: url('fonts/almendra-regular.eot');
+    src: url('fonts/almendra-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/almendra-regular.woff2') format('woff2'),
+         url('fonts/almendra-regular.woff') format('woff'),
+         url('fonts/almendra-regular.ttf') format('truetype'),
+         url('fonts/almendra-regular.svg#fonts/almendraregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Don't select anything */
+*
+{	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+/* ...except input and textarea */
+input, textarea
+{	user-select: text;
+	-moz-user-select: text;
+	-khtml-user-select: text;
+	-webkit-user-select: text;
+	-ms-user-select: text;
+}
+
+body
+{	overflow:hidden;
+	background:#333;
+}
+
+#container
+{	position: fixed;
+	top:0; left:0;
+	bottom:0; right:0;
+}
+#content
+{	position: fixed;
+	top:0; left:0;
+	bottom:0; right:0;
+	z-index:1;
+}
+#map
+{	position: fixed;
+	top:0; left:0;
+	bottom:0; right:0;
+	z-index:0;
+}
+#teleporte
+{	position:fixed;
+	z-index:1;
+}
+#teleporte .deletable span
+{	height:24px!important;
+	width:20px!important;
+	vertical-align:top!important;
+	opacity:0.9;
+}
+#teleporte input
+{	border:0;
+	border-radius:0;	/* iphone */
+}
+
+#content *
+{	cursor:none;
+}
+#content *:hover
+{	cursor:pointer;
+}
+.layer
+{	border:5px solid #fff;
+	position: fixed;
+	bottom:20px;
+	left:20px;
+	padding: 65px 5px 0; 
+	width: 70px;
+	height: 15px;
+	color: #fff;
+	font-weight: bold;
+	font-size:15px;
+	line-height:15px;
+	font-family: sans-serif;
+}
+#emajor
+{	background:url("img/emajor.jpg") no-repeat center;
+	display: none;
+}
+#ortho
+{	background:url("img/ortho.jpg") no-repeat center;
+}
+
+/* Heros */
+#orc
+{	background-image:url(img/orc.png);
+}
+#robin
+{	background-image:url(img/robin.png);
+}
+#princess
+{	background-image:url(img/princess.png);
+}
+#sara
+{	background-image:url(img/sara.png);
+}
+
+/* Compas */
+#compas
+{	width: 100px;
+    height: 100px;
+    overflow: hidden;
+	position:fixed;
+    bottom: 100px;
+    right: 100px;
+	background-image:url("img/compass_rose.png");
+	opacity:0.5;
+}
+
+/* Dialogue */
+#about
+{	background:url("img/papyrus.png") repeat-y;
+	padding: 0 30px;
+	width:560px;
+	height:100%;
+	position:absolute;
+	top:0; left:50%;
+	margin:0px  0 0 -320px;
+	z-index:1000;
+	font-family:almendra;
+	color:#333;
+	font-weight: bold;
+	font-variant-ligatures: common-ligatures;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+	overflow:hidden;
+	transition: all 0.3s cubic-bezier(0.2, -0.5, 0.8, 1.5) 0s;
+	-webkit-transition: all 0.3s cubic-bezier(0.2, -0.5, 0.8, 1.5) 0s;
+}
+
+#about.hidden
+{	top:-110%;
+}
+#about h2,
+#about ul,
+#about p
+{	margin:0;
+}
+#about a
+{	text-decoration:none;
+	color:#338;
+}
+#about .mCS-minimal-dark
+{	opacity:1;
+}
+
+.sceau
+{	background:url("img/sceau.png") no-repeat;
+	position: absolute;
+	width:100px;
+	height:102px;
+	transform: scale(0.6) rotate(5deg);
+	-webkit-transform: scale(0.6) rotate(5deg);
+	bottom:0px;
+	left:auto;
+	right:0;
+	cursor:pointer;
+}
+#about .sceau
+{	left:auto;
+	right:25px;
+}
+
+#parchemin .sceau
+{	left:0;
+	right:auto;
+	bottom:10px;
+}
+
+#parchemin
+{	transform: scale(0);
+	-webkit-transform: scale(0);
+	opacity:0;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	display:block!important;
+	visibility:hidden;
+	background: #fff;
+	/*
+	position:absolute;
+	top:30%;
+	left:50%;
+	margin-left:-200px;
+	*/
+	width:420px;
+	height:335px;
+	background:url("img/parchemin_back.png") no-repeat;
+	z-index:0;
+	font-family:almendra;
+	font-size:0.8em;
+	overflow:hidden;
+}
+#parchemin .info
+{	padding:40px 40px 20px 20px;
+	overflow:hidden;
+	max-height:230px;
+}
+#parchemin p, #parchemin h2
+{	margin:0;
+	text-rendering: optimizeLegibility;
+	-webkit-font-variant-ligatures: common-ligatures;
+	font-variant-ligatures: common-ligatures;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+}
+#parchemin p.cat
+{	color:#080;
+}
+#parchemin img
+{	max-width:150px;
+	max-height:120px;
+	float:right;
+	/* Masque : http://codepen.io/iamvdo/pen/wFrAq */
+	-webkit-mask: url('img/masks/flame.png');
+	-webkit-mask-size: 100% 100%;
+	-webkit-mask-position: center;
+	margin: -10px -10px 0 0;
+}
+#parchemin .top
+{	background:url("img/parchemin_top.png") no-repeat;
+	top:0;
+	left:0;
+	position: absolute;
+	width:284px;
+	height:48px;
+}
+#parchemin .bottom
+{	background:url("img/parchemin_bottom.png") no-repeat;
+	bottom:20px;
+	right:20px;
+	position: absolute;
+	width:300px;
+	height:75px;
+}
+#parchemin.zoom-in
+{	transform: scale(1);
+	-webkit-transform: scale(1);
+	opacity:1;
+	display:block!important;
+	visibility:visible;
+}
+
+#content .sprite
+{	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	-webkit-transition: -webkit-transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.teleport .sprite
+{	transform: scale(0.6, 200);
+	-webkit-transform: scale(0.6, 200);
+	opacity:0;
+}

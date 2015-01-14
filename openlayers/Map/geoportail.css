@@ -1,0 +1,17 @@
+.olControlAttribution 
+{	background-color: rgba(255, 255, 255, 0.5);
+	bottom: 0;
+	padding:0 6px;
+}
+.olControlAttribution:hover
+{	background-color: rgba(255, 255, 255, 0.8);
+}	
+.olImageLoadError
+{	background-color:Transparent;
+}
+
+.attribution-ign
+{	position:absolute;
+	bottom:1.3em;
+	right:0;
+}

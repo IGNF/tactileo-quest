@@ -1,12 +1,12 @@
 #Tactileo-quest
 
 Tactileo Quest is a proof of concept to demonstrate the abilities of collecting information on a map to use in a serious game.
-**Tactileo** is a french project of the Education Nationale that aims to study and define API for touch devices to bring such devices into school context.
+**Tactileo** is a french project of the Education Nationale that aims to study and define API for multi touch devices to bring such devices into school context.
 IGN-France is involved in this project in defining interactions with maps.
 
 *Disclaimer: This sample app is by no means a complete game or complete game engine. I wrote this code in about 4 days (including design and sprite) and additional cleanup/optimization should be used in a real-world game.*
 
-###Source code**
+###Source code
 
 Full source code for this demo application is available on GitHub under the [CeCILL-B licence](http://www.cecill.info/licences/Licence_CeCILL-B_V1-en.txt) (a french BSD like licence). 
 This code is provided as-is. 
@@ -25,9 +25,9 @@ For interaction with contents, the resources are provided by the french [DBPedia
 
 I inspired myself of the PhoneGap-Legends game published by Andrew Trice (https://github.com/triceam/PhoneGap-Legends).
 
-### ATTRIBUTION:
+### ATTRIBUTION
 
-The following assets were used in the creation of this sample app :
+The following assets were used in the creation of this sample app:
 
 - Images and animations
 	- Logo Tactileo - (c) Tacileo 2014 - http://projet.tactileo.net/
@@ -41,8 +41,8 @@ The following assets were used in the creation of this sample app :
 	- Almendra font (c) 2011-2012 Ana Sanfelippo, Open font Licence v1.1 - http://www.fontsquirrel.com/fonts/almendra
 
 - Cartography
-	- Carte d'Etat Major(r) (1820-1866) - (c) IGN-Géoportail - http://www.geoportail.gouv.fr/donnee/56/carte-de-l-etat-major-en-couleur?l=GEOGRAPHICALGRIDSYSTEMS.ETATMAJOR40$GEOPORTAIL:OGC:WMTS%281%29&permalink=yes
-	- Photographies aériennes - (c) IGN-Géoportail - http://www.geoportail.gouv.fr/donnee/81/photographies-aeriennes?l=ORTHOIMAGERY.ORTHOPHOTOS$GEOPORTAIL:OGC:WMTS%281%29&permalink=yes
+	- [Carte d'Etat Major(r) (1820-1866)](http://www.geoportail.gouv.fr/donnee/56/carte-de-l-etat-major-en-couleur?l=GEOGRAPHICALGRIDSYSTEMS.ETATMAJOR40$GEOPORTAIL:OGC:WMTS%281%29&permalink=yes) - (c) IGN-Géoportail
+	- [Photographies aériennes](http://www.geoportail.gouv.fr/donnee/81/photographies-aeriennes?l=ORTHOIMAGERY.ORTHOPHOTOS$GEOPORTAIL:OGC:WMTS%281%29&permalink=yes) - (c) IGN-Géoportail
 
 - Information resource
 	- DBPedia Knowledge Base - (c) DBPedia CC-By-SA - http://dbpedia.org/About
