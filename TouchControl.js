@@ -49,10 +49,21 @@ var TouchControl = Classe.extend(
 		}
 		
 		// Listen touch events
-		this.target.addEventListener('touchstart', function(e){ self.touchStart(e); }, false);
-		this.target.addEventListener('touchmove', function(e){ self.touchMove(e); }, false);
-		this.target.addEventListener('touchend', function(e){ self.touchEnd(e); }, false);
-
+		if (window.navigator.msPointerEnabled) 
+		{	function e2event(e) { e.changedTouches = [e]; e.identifier=e.pointerId; console.log(e.identifier); return e; }
+			this.target.addEventListener('MSPointerDown', function(e){ self.touchStart(e2event(e)); }, false);
+			this.target.addEventListener('MSPointerMove', function(e){ self.touchMove(e2event(e)); }, false);
+			this.target.addEventListener('MSPointerUp', function(e){ self.touchEnd(e2event(e)); }, false);
+			this.target.addEventListener('MSPointerOut', function(e){ self.touchEnd(e2event(e)); }, false);
+			this.target.addEventListener('MSPointerCancel', function(e){ self.touchEnd(e2event(e)); }, false);
+		}
+		else
+		{	this.target.addEventListener('touchstart', function(e){ self.touchStart(e); }, false);
+			this.target.addEventListener('touchmove', function(e){ self.touchMove(e); }, false);
+			this.target.addEventListener('touchend', function(e){ self.touchEnd(e); }, false);
+			this.target.addEventListener('touchcancel', function(e){ self.touchEnd(e); }, false);
+		}
+		
 		function is_touch_device() 
 		{	return (('ontouchstart' in window)
 				  || (navigator.MaxTouchPoints > 0)

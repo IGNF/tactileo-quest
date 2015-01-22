@@ -6,6 +6,10 @@ IGN-France is involved in this project in defining interactions with maps.
 
 *Disclaimer: This sample app is by no means a complete game or complete game engine. I wrote this code in about 4 days (including design and sprite) and additional cleanup/optimization should be used in a real-world game.*
 
+If you’d like to test this out on your own devices, you can now access it online at http://ignf.github.io/tactileo-quest/
+On Android you should better use Chrome and "Add to homescreen" to run the webapp fullscreen.
+On Iphone/IPad, tap the share button. On windows, don't use IExplorer on touch screen!
+
 ###Source code
 
 Full source code for this demo application is available on GitHub under the [CeCILL-B licence](http://www.cecill.info/licences/Licence_CeCILL-B_V1-en.txt) (a french BSD like licence). 
@@ -23,7 +27,7 @@ The map used in this context is an old map layer (1820-1866) provided by the [fr
 I use the OpenLayers library to render it.
 For interaction with contents, the resources are provided by the french [DBPedia project](http://fr.dbpedia.org/).
 
-I inspired myself of the PhoneGap-Legends game published by Andrew Trice (https://github.com/triceam/PhoneGap-Legends).
+This project was also freely inspired by the PhoneGap-Legends game published by Andrew Trice (https://github.com/triceam/PhoneGap-Legends).
 
 ### ATTRIBUTION
 
