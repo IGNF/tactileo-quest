@@ -217,6 +217,8 @@ var wapp = (function()
 		$(".sprite").parent().addClass("teleport");
 		setTimeout (function() { $(".sprite").parent().removeClass("teleport"); }, 1000);
 		
+		if (window.cordova) navigator.splashscreen.hide();
+		
 		render();
 
 		// iPad add to home screen menu
@@ -250,13 +252,20 @@ var wapp = (function()
 		}
 		// Show parchemin
 		if (parcheminTxt)
-		{	$("#parchemin .info").html(parcheminTxt);
-			$("#parchemin").parent().show();
-			setTimeout (function(){ $("#parchemin").addClass("zoom-in"); }, 100);
-			dbpedia.redraw();
-			parcheminTxt = false;
+		{	if (parcheminTxt === true) 
+			{	$("#parchemin").addClass("zoom-in");
+				parcheminTxt = false;
+			}
+			else
+			{	$("#parchemin .info").html(parcheminTxt);
+				$("#parchemin").parent().show();
+				//setTimeout (function(){ $("#parchemin").addClass("zoom-in"); }, 100);
+				dbpedia.redraw();
+				parcheminTxt = true;
+			}
 		}
-		parchemin.cssTransform(); 
+		parchemin.cssTransform();
+		
 		// Move characters
 		for (var i in perso)
 		{	perso[i].render()
@@ -265,7 +274,8 @@ var wapp = (function()
 
 	/** Start the app
 	*/
-	$(document).ready(initialize);
+	if (window.cordova) document.addEventListener('deviceready', function(e) { initialize(); } , false);
+	else $(document).ready(initialize);
 
 	/** Export for debug */
 	return { 

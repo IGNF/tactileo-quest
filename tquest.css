@@ -124,11 +124,11 @@ body
 #about
 {	background:url("img/papyrus.png") repeat-y;
 	padding: 0 30px;
-	width:560px;
+	width:540px;
 	height:100%;
 	position:absolute;
 	top:0; left:50%;
-	margin:0px  0 0 -320px;
+	margin:0px  0 0 -300px;
 	z-index:1000;
 	font-family:almendra;
 	color:#333;
@@ -186,14 +186,6 @@ body
 	transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
 	display:block!important;
-	visibility:hidden;
-	background: #fff;
-	/*
-	position:absolute;
-	top:30%;
-	left:50%;
-	margin-left:-200px;
-	*/
 	width:420px;
 	height:335px;
 	background:url("img/parchemin_back.png") no-repeat;
@@ -248,7 +240,6 @@ body
 	-webkit-transform: scale(1);
 	opacity:1;
 	display:block!important;
-	visibility:visible;
 }
 
 #content .sprite
