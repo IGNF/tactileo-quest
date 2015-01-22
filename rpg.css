@@ -3,6 +3,11 @@
 * Copyright (c) 2014 by Jean-Marc.Viglino [at] ign.fr
 * Licensed under the CeCILL-B Licence (http://www.cecill.info/).
 */
+.touchWrapper
+{	overflow: visible;
+	border:1px solid rgba(0,0,0,0);
+}
+
 .sprite
 {	width: 64px;
 	height: 64px;
