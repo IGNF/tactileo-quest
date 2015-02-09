@@ -6,7 +6,9 @@ IGN-France is involved in this project in defining interactions with maps.
 
 *Disclaimer: This sample app is by no means a complete game or complete game engine. I wrote this code in about 4 days (including design and sprite) and additional cleanup/optimization should be used in a real-world game.*
 
-If you’d like to test this out on your own devices, you can now access it online at http://ignf.github.io/tactileo-quest/
+![Tactileo-Quest](http://www.ign.fr/institut/sites/all/files/tactileo-quest.jpg)
+
+If youâ€™d like to test this out on your own devices, you can now access it online at http://ignf.github.io/tactileo-quest/
 On Android you should better use Chrome and "Add to homescreen" to run the webapp fullscreen.
 On Iphone/IPad, tap the share button. On windows, don't use IExplorer on touch screen!
 
@@ -45,8 +47,8 @@ The following assets were used in the creation of this sample app:
 	- Almendra font (c) 2011-2012 Ana Sanfelippo, Open font Licence v1.1 - http://www.fontsquirrel.com/fonts/almendra
 
 - Cartography
-	- [Carte d'Etat Major(r) (1820-1866)](http://www.geoportail.gouv.fr/donnee/56/carte-de-l-etat-major-en-couleur?l=GEOGRAPHICALGRIDSYSTEMS.ETATMAJOR40$GEOPORTAIL:OGC:WMTS%281%29&permalink=yes) - (c) IGN-Géoportail
-	- [Photographies aériennes](http://www.geoportail.gouv.fr/donnee/81/photographies-aeriennes?l=ORTHOIMAGERY.ORTHOPHOTOS$GEOPORTAIL:OGC:WMTS%281%29&permalink=yes) - (c) IGN-Géoportail
+	- [Carte d'Etat Major(r) (1820-1866)](http://www.geoportail.gouv.fr/donnee/56/carte-de-l-etat-major-en-couleur?l=GEOGRAPHICALGRIDSYSTEMS.ETATMAJOR40$GEOPORTAIL:OGC:WMTS%281%29&permalink=yes) - (c) IGN-GÃ©oportail
+	- [Photographies aÃ©riennes](http://www.geoportail.gouv.fr/donnee/81/photographies-aeriennes?l=ORTHOIMAGERY.ORTHOPHOTOS$GEOPORTAIL:OGC:WMTS%281%29&permalink=yes) - (c) IGN-GÃ©oportail
 
 - Information resource
 	- DBPedia Knowledge Base - (c) DBPedia CC-By-SA - http://dbpedia.org/About
