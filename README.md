@@ -1,7 +1,7 @@
 #Tactileo-quest
 
 Tactileo Quest is a proof of concept to demonstrate the abilities of collecting information on a map to use in a serious game.
-**Tactileo** is a french project of the Education Nationale that aims to study and define API for multi touch devices to bring such devices into school context.
+[**Tactileo**](http://projet.tactileo.net/) is a french project of the Education Nationale that aims to study and define API for multi touch devices to bring such devices into school context.
 IGN-France is involved in this project in defining interactions with maps.
 
 *Disclaimer: This sample app is by no means a complete game or complete game engine. I wrote this code in about 4 days (including design and sprite) and additional cleanup/optimization should be used in a real-world game.*
